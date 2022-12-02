@@ -4,6 +4,26 @@
 
 ---
 
+# When we already have projects saved in our local computer, we want to upload our files on github
+
+Let's say that we have project files saved in our local computer
+
+We should create a repository on github.com website. We can't create github repository on bash.
+
+And we should go to our root directory in our local computer and there on bash,
+
+```
+$ git init
+$ git status
+$ git add .
+$ git commit -m "first commit"
+$ git remote add <name of the github repository> <url for github repository>
+$ git push <name of the github repository>
+```
+
+
+
+
 
 - Create a file
 
