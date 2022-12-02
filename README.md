@@ -16,6 +16,7 @@ And we should go to our root directory in our local computer and there on bash,
 $ git init
 $ git status
 $ git add .
+$ git status
 $ git commit -m "first commit"
 $ git remote add <name of the github repository> <url for github repository>
 $ git push <name of the github repository>
