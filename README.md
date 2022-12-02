@@ -23,3 +23,10 @@ touch practice.py
 ```bash
 code practice.py
 ```
+
+
+- When we have one `master` branch, and another branch called `login`, we want to merge the `login` branch to master branch
+
+```bash
+git merge login
+```
