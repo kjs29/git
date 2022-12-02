@@ -84,3 +84,9 @@ index fcfb538..f8f17a0 100644
 ```bash
 git checkout 66e21c
 ```
+
+or if we want to change the specific file only
+
+```bash
+git checkout 66e21c README.md
+```
