@@ -16,3 +16,10 @@ Create `practice.py` file
 ```
 touch practice.py
 ```
+
+
+- Open up a file called `practice.py`
+
+```bash
+code practice.py
+```
