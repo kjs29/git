@@ -1,6 +1,6 @@
 # Learn about github
 
-# [Github guides](https://github.com/git-guides/git-init)
+# [Github guides (https://github.com/git-guides)](https://github.com/git-guides/git-init)
 
 ---
 
