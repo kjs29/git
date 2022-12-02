@@ -5,14 +5,14 @@
 ---
 
 
-- Create file command.
+- Create a file
 
-Create `index.html` file
+1. Create `index.html` file
 ```bash
 touch index.html
 ```
 
-Create `practice.py` file
+2. Create `practice.py` file
 ```
 touch practice.py
 ```
