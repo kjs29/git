@@ -4,7 +4,7 @@
 
 ---
 
-# When we already have projects saved in our local computer, we want to upload our files on github
+# When we already have projects saved in our local computer, we want to upload our files on github for the first time!
 
 Let's say that we have project files saved in our local computer
 
@@ -19,12 +19,115 @@ $ git add .
 $ git status
 $ git commit -m "first commit"
 $ git remote add <name of the github repository> <url for github repository>
+$ git remote -v
 $ git push <name of the github repository>
 ```
 
+# Code explain
 
+1.
 
+```
+$ git init
+```
 
+This initializes git with default branch called `master`
+
+If we want to set a default branch called `main`, we should write
+
+```
+$ git init -b main
+```
+
+This will set `main` as default branch.
+
+2.
+
+```
+$ git status
+```
+
+This is always a good practice. This checks what has changed in the file, what files were added, etc.
+
+3.
+
+```
+$ git add .
+```
+
+This adds the entire files that are located in the current working directory to the staging area.
+
+If we want to add a specific file, we can write
+
+```
+$ git add README.md
+```
+
+This will add only `README.md`
+
+4.
+
+```
+$ git status
+```
+
+Now you will see that `README.md` was updated.
+
+5.
+
+```
+$ git commit -m 'first commit`
+```
+
+This actually becomes a change(commit) in the repository with a message `first commit`.
+
+6.
+
+```
+$ git remote add <name of the github repository> <url forgithub repository>
+```
+
+This one is important, this connects the current local directory in our computer to the repository that was just created on github.com
+
+The real example would be like
+
+```
+$ git remote add lets_git_it https://github.com/kjs29/lets_git_it.git
+```
+
+Another thing is, we can say like this
+
+```
+$ git remote add origin https://github.com/kjs29/lets_git_it.git
+```
+
+7.
+
+```
+$ git remote -v
+```
+
+We can check our remote URL by using this code.
+
+8.
+
+```
+$ git push origin <name of the github repository>
+```
+
+We upload the local project files that are on staging area to the repository on github.com
+
+Actual example would be like
+
+```
+$ git push origin lets_git_it
+```
+
+We can also say 
+
+```
+$ git push origin main
+```
 
 - Create a file
 
