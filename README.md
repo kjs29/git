@@ -25,7 +25,7 @@ $ git push <name of the github repository>
 
 # Code explain
 
-1.
+## 1.
 
 ```
 $ git init
@@ -41,7 +41,7 @@ $ git init -b main
 
 This will set `main` as default branch.
 
-2.
+## 2.
 
 ```
 $ git status
@@ -49,7 +49,7 @@ $ git status
 
 This is always a good practice. This checks what has changed in the file, what files were added, etc.
 
-3.
+## 3.
 
 ```
 $ git add .
@@ -65,7 +65,7 @@ $ git add README.md
 
 This will add only `README.md`
 
-4.
+## 4.
 
 ```
 $ git status
@@ -73,7 +73,7 @@ $ git status
 
 Now you will see that `README.md` was updated.
 
-5.
+## 5.
 
 ```
 $ git commit -m 'first commit`
@@ -81,7 +81,7 @@ $ git commit -m 'first commit`
 
 This actually becomes a change(commit) in the repository with a message `first commit`.
 
-6.
+## 6.
 
 ```
 $ git remote add <name of the github repository> <url forgithub repository>
@@ -101,7 +101,7 @@ Another thing is, we can say like this
 $ git remote add origin https://github.com/kjs29/lets_git_it.git
 ```
 
-7.
+## 7.
 
 ```
 $ git remote -v
@@ -109,7 +109,7 @@ $ git remote -v
 
 We can check our remote URL by using this code.
 
-8.
+## 8.
 
 ```
 $ git push origin <name of the github repository>
@@ -129,36 +129,46 @@ We can also say
 $ git push origin main
 ```
 
+---
+
+# Useful codes
+
 - Create a file
 
 1. Create `index.html` file
+
 ```bash
-touch index.html
+$ touch index.html
 ```
 
 2. Create `practice.py` file
 ```
-touch practice.py
+$ touch practice.py
 ```
 
 
 - Open up a file called `practice.py`
 
 ```bash
-code practice.py
+$ code practice.py
 ```
 
+- After modifying the code, we want to see the difference in our files
+
+```
+$ git diff
+```
 
 - When we have one `master` branch, and another branch called `login`, we want to merge the `login` branch to master branch
 
 ```bash
-git merge login
+$ git merge login
 ```
 
 - When we want to see the previous commits in one line
 
 ```bash
-git log --oneline
+$ git log --oneline
 ```
 
 The result will look like this
@@ -179,7 +189,7 @@ c649dfc Create 11.30.md
 - To see what we changed in the commit `66e21c1`
 
 ```bash
-git show 66e21c1
+$ git show 66e21c1
 ```
 
 The result will look like this
@@ -206,11 +216,11 @@ index fcfb538..f8f17a0 100644
 - When we want to revert to a certain version `66e21c1`
 
 ```bash
-git checkout 66e21c
+$ git checkout 66e21c
 ```
 
 or if we want to change the specific file only
 
 ```bash
-git checkout 66e21c README.md
+$ git checkout 66e21c README.md
 ```
