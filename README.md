@@ -1,4 +1,4 @@
-# Learn about github
+# Learn about git/github
 
 # [Github guides (https://github.com/git-guides/)](https://github.com/git-guides/git-init)
 
