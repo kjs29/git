@@ -223,11 +223,20 @@ $ git log -p
 
 ### Undo/ Revert
 
+- Undo
+
 After commit, when we want to revert. It is like `ctrl + z`.
 
 ```bash
 $ git checkout HEAD <filename>
 ```
+
+Before commit(but still after `$ git add `), when we want to revert. It is like `ctrl + z`.
+
+```bash
+$ git reset HEAD <filename>
+```
+
 
 HEAD means the current commit.
 
