@@ -273,6 +273,9 @@ $ git commit -m "added random.txt"
 
 Now the `random.txt` file is in committed state which is ready to be pushed(uploaded) on github.
 
+
+# Summary : `$ git reset <textfile name>` is for putting the files in `staged` state back into `modified` state.
+
 ---
 
 After commit, when we want to revert. It is like `ctrl + z`.
