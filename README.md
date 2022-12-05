@@ -241,7 +241,7 @@ Files that are `committed` state are safely stored and they are also ready to be
 
 ---
 
-`$ git checkout <filename>`
+# `$ git checkout <filename>`
 
 ## Here are the steps for `$ git checkout <filename>` and `$ git restore .`
 
@@ -255,6 +255,8 @@ Both `$ git checkout <filename>` and `$ git restore .` are to undo the changes i
 $ git checkout README.md`
 ```
 
+
+# `$ git reset <filename>`
 
 ## Here are the steps for `$ git reset <filename>`
 
