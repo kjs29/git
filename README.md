@@ -165,6 +165,8 @@ $ git diff
 $ git merge login
 ```
 
+### Viewing commits, viewing the changes
+
 - When we want to see the previous commits in one line
 
 ```bash
@@ -211,7 +213,15 @@ index fcfb538..f8f17a0 100644
 
 ```
 
-### Undo
+or we can code like this to view the changes in each commit.
+
+```bash
+$ git log -p
+```
+
+
+
+### Undo/ Revert
 
 After commit, when we want to revert. It is like `ctrl + z`.
 
@@ -233,17 +243,3 @@ or if we want to change the specific file only
 ```bash
 $ git checkout 66e21c README.md
 ```
-
-
-- After commit, we want to see what was on the commit
-
-```bash
-$ git log -p
-```
-
-- Show the content in the specific commit
-
-```bash
-$ git show 1528ca
-```
-
