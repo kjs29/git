@@ -211,6 +211,15 @@ index fcfb538..f8f17a0 100644
 
 ```
 
+### Undo
+
+After commit, when we want to revert. It is like `ctrl + z`.
+
+```bash
+$ git checkout HEAD <filename>
+```
+
+HEAD means the current commit.
 
 
 - When we want to revert to a certain version `66e21c1`
@@ -237,3 +246,4 @@ $ git log -p
 ```bash
 $ git show 1528ca
 ```
+
