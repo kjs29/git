@@ -223,24 +223,55 @@ $ git log -p
 
 ### Undo/ Revert
 
-- Undo
+# Before going over undo/revert in git, we need to understand this conceptfirst.
 
-Before commit(but still after `$ git add `), when we want to revert. It is like `ctrl + z`.
+## Git has three states.
 
-```bash
-$ git reset HEAD <filename>
+1. Modified
+
+You changed the file still, but you haven't added the file to the staging area yet.
+
+2. Staged
+
+Think of `staged` state as checked files for the commit state
+
+3. Committed
+
+Files that are `committed` state are safely stored and they are also ready to be pushed(uploaded) on github.
+
+Here are the steps
+
+1. We modify files in `working tree` - currently in modified state
+
+ex. adding files, deleting files, modifying files
+
+2. We choose what files to be staged in staging area
+
+ex. `$ git add random.txt`, `$ git add .`
+
+After we type `$ git add random.txt` now the `random.txt` is in staging area. Or it is in `staged` state.
+
+If we want to put the `random.txt` back into modified state, or if we want to take `random.txt` out of `staging area` we can use this code
+
+```
+$ git reset random.txt
 ```
 
-or when we want to go back to certain commit version
+Let's say that we are ready to add `random.txt` to staging area
 
-```bash
-$ git reset <commit_SHA>
+```
+$ git add random.txt
 ```
 
-```bash
-$ git reset 21dc2c
+3. and we are ready to commit.
+
+```
+$ git commit -m "added random.txt"
 ```
 
+Now the `random.txt` file is in committed state which is ready to be pushed(uploaded) on github.
+
+---
 
 After commit, when we want to revert. It is like `ctrl + z`.
 
