@@ -225,23 +225,34 @@ $ git log -p
 
 - Undo
 
-After commit, when we want to revert. It is like `ctrl + z`.
-
-```bash
-$ git checkout HEAD <filename>
-```
-
 Before commit(but still after `$ git add `), when we want to revert. It is like `ctrl + z`.
 
 ```bash
 $ git reset HEAD <filename>
 ```
 
+or when we want to go back to certain commit version
+
+```bash
+$ git reset <commit_SHA>
+```
+
+```bash
+$ git reset 21dc2c
+```
+
+
+After commit, when we want to revert. It is like `ctrl + z`.
+
+```bash
+$ git checkout HEAD <filename>
+```
+
 
 HEAD means the current commit.
 
 
-- When we want to revert to a certain version `66e21c1`
+- When we want to revert to a certain version `66e21c1` (after commits)
 
 ```bash
 $ git checkout 66e21c
