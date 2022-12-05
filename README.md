@@ -224,3 +224,16 @@ or if we want to change the specific file only
 ```bash
 $ git checkout 66e21c README.md
 ```
+
+
+- After commit, we want to see what was on the commit
+
+```bash
+$ git log -p
+```
+
+- Show the content in the specific commit
+
+```bash
+$ git show 1528ca
+```
