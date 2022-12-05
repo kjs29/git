@@ -252,9 +252,11 @@ Both `$ git checkout <filename>` and `$ git restore .` are to undo the changes i
 2. We want to undo the changes 
 
 ```
-$ git checkout README.md`
+$ git checkout README.md
 ```
 
+
+# Summary : `$ git checkout <filename>` is for undoing changes in unstaged files.
 
 # `$ git reset <filename>`
 
