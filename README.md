@@ -223,19 +223,19 @@ $ git log -p
 
 ### Undo/ Revert
 
-# Before going over undo/revert in git, we need to understand this conceptfirst.
+# Before going over undo/revert in git, we need to understand this concept first.
 
 ## Git has three states.
 
-1. Modified
+### 1. Modified
 
 You changed the file still, but you haven't added the file to the staging area yet.
 
-2. Staged
+### 2. Staged
 
 Think of `staged` state as checked files for the commit state
 
-3. Committed
+### 3. Committed
 
 Files that are `committed` state are safely stored and they are also ready to be pushed(uploaded) on github.
 
