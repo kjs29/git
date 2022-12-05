@@ -233,23 +233,25 @@ You changed the file still, but you haven't added the file to the staging area y
 
 ### 2. Staged
 
-Think of `staged` state as checked files for the commit state
+Think of `staged` state as checked files for the committed state
 
 ### 3. Committed
 
 Files that are `committed` state are safely stored and they are also ready to be pushed(uploaded) on github.
 
-Here are the steps
+---
+
+## Here are the steps
 
 1. We modify files in `working tree` - currently in modified state
 
-ex. adding files, deleting files, modifying files
+ex. adding files `$ touch random.txt`, deleting files `$ rm hello.txt`, modifying files
 
 2. We choose what files to be staged in staging area
 
 ex. `$ git add random.txt`, `$ git add .`
 
-After we type `$ git add random.txt` now the `random.txt` is in staging area. Or it is in `staged` state.
+After we type `$ git add random.txt` now the `random.txt` is in staging area, or it is in `staged` state.
 
 If we want to put the `random.txt` back into modified state, or if we want to take `random.txt` out of `staging area` we can use this code
 
