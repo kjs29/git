@@ -241,9 +241,22 @@ Files that are `committed` state are safely stored and they are also ready to be
 
 ---
 
-## Here are the steps
+## Here are the steps for `$ git checkout <filename>` and `$ git restore .`
 
-1. We modify files in `working tree` - currently in modified state
+Both `$ git checkout <filename>` and `$ git restore .` are to undo the changes in `working tree` or `modified` state.
+
+1. We modify files in `working tree` or currently in modified state
+
+2. We want to undo the changes 
+
+```
+$ git checkout README.md`
+```
+
+
+## Here are the steps for `$ git reset <filename>`
+
+1. We modify files in `working tree` or currently in modified state
 
 ex. adding files `$ touch random.txt`, deleting files `$ rm hello.txt`, modifying files
 
