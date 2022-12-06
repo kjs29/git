@@ -256,9 +256,9 @@ $ git checkout README.md
 ```
 
 
-# Summary : `$ git checkout <filename>` is for undoing changes in unstaged files.
+### Summary : `$ git checkout <filename>` is for undoing changes in unstaged files.
 
-# `$ git reset <filename>`
+## `$ git reset <filename>`
 
 ## Here are the steps for `$ git reset <filename>`
 
@@ -293,7 +293,7 @@ $ git commit -m "added random.txt"
 Now the `random.txt` file is in committed state which is ready to be pushed(uploaded) on github.
 
 
-# Summary : `$ git reset <textfile name>` is for putting the files in `staged` state back into `modified` state. [Helpful video](https://youtu.be/qpIvpP1Ag2A)
+### Summary : `$ git reset <textfile name>` is for putting the files in `staged` state back into `modified` state. [Helpful video](https://youtu.be/qpIvpP1Ag2A)
 
 
 
@@ -308,7 +308,7 @@ $ git checkout HEAD <filename>
 HEAD means the current commit.
 
 
-- When we want to revert to a certain version `66e21c1` (after commits)
+# When we want to revert to a certain version `66e21c1` (after commits)
 
 ```bash
 $ git checkout <commit_SHA> .
