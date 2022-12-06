@@ -299,6 +299,7 @@ Now the `random.txt` file is in committed state which is ready to be pushed(uplo
 
 After commit, when we want to revert. It is like `ctrl + z`.
 
+
 ```bash
 $ git checkout HEAD <filename>
 ```
@@ -308,6 +309,10 @@ HEAD means the current commit.
 
 
 - When we want to revert to a certain version `66e21c1` (after commits)
+
+```bash
+$ git checkout <commit_SHA> .
+```
 
 ```bash
 $ git checkout 66e21c
