@@ -129,6 +129,18 @@ We can also say
 $ git push origin main
 ```
 
+In order for us to push faster in the future, we have to say like this.
+
+```
+$ git push -u origin main
+```
+
+or
+
+```
+$ git push --set-upstream origin main
+```
+
 ---
 
 # Useful codes
