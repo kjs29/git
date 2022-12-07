@@ -95,11 +95,46 @@ The real example would be like
 $ git remote add lets_git_it https://github.com/kjs29/lets_git_it.git
 ```
 
+---
 Another thing is, we can say like this
 
 ```
 $ git remote add origin https://github.com/kjs29/lets_git_it.git
 ```
+
+Later on, then we have to 
+
+```
+$ git push origin main
+```
+
+This is one pair.
+
+```
+# push
+
+$ git remote add lets-git-it main
+$ git push lets-git-it main
+
+# pull
+
+$ git pull lets-git-it main
+```
+
+This is another pair.
+
+```
+# push
+
+$ git remote add origin main
+$ git push origin main
+
+# pull
+
+$ git pull origin main
+```
+
+
 
 ## 7.
 
