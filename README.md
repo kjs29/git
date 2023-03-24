@@ -266,9 +266,9 @@ or we can code like this to view the changes in each commit.
 $ git log -p
 ```
 
+# Undo/ Revert
 
-
-### Undo/ Revert / AKA When I make make mistakes and `git add` or `git commit`.
+## AKA When I make make mistakes before `git add`, after `git add`, or after `git commit`.
 
 # Before going over undo/revert in git, we need to understand this concept first.
 
@@ -280,7 +280,10 @@ You changed the file still, but you haven't added the file to the staging area y
 
 ### 2. Staged
 
-Think of `staged` state as checked files for the committed state
+Think of `staged` state as checked files for the committed state 
+
+Staged ☑
+Unstaged ☐
 
 ### 3. Committed
 
@@ -288,7 +291,7 @@ Files that are `committed` state are safely stored and they are also ready to be
 
 # We will talk about how to undo / revert `modified`, `staged`, `committed` files.
 
-# 1. Undo / revert `modified`. (This is like `ctrl + z` for specific files`)
+# 1. Undo / revert `modified`. (This is like `ctrl + z` for specific files)
 
 ## `$ git checkout <filename>`, `$ git restore <filename>`
 
@@ -306,7 +309,7 @@ $ git checkout README.md
 
 ## Summary : `$ git checkout <filename>` is for undoing changes in unstaged files.
 
-# Undo / revert `2`.
+# Undo / revert `Staged`.
 
 ## `$ git reset <filename>`
 
@@ -342,7 +345,7 @@ Now the `random.txt` file is in committed state which is ready to be pushed(uplo
 
 ---
 
-After commit, when we want to revert or roll back,
+# After commit, when we want to revert or roll back,
 
 The command below leaves all the changes still,
 
@@ -361,21 +364,21 @@ $ git reset --hard HEAD~1
 
 # When we want to revert to a certain version `66e21c1` (after commits)
 
-This reverts all the files to that specific time when someone made a commit `66e21c1`.
+This reverts all the files to that specific version at the time when someone made a commit `66e21c1`.
 
-`1.`
+1.
 
 ```
 $ git reset --hard 66e21c1
 ```
 
-`2.`
+2.
 
 ```bash
 $ git checkout 66e21c1 .
 ```
 
-The difference between `1.` and `2.` is that `1.` deletes all the commits to `66e21c1`, and `2.` doesn't delete all the commits.(It leaves history).
+The difference between `1.` and `2.` is that `1.` deletes all the commits between HEAD and `66e21c1`, and `2.` doesn't delete all the commits.(It leaves history).
 
 If we want to change the specific file only
 
