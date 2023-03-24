@@ -268,7 +268,7 @@ $ git log -p
 
 
 
-### Undo/ Revert
+### Undo/ Revert / AKA When I make make mistakes and `git add` or `git commit`.
 
 # Before going over undo/revert in git, we need to understand this concept first.
 
@@ -286,9 +286,11 @@ Think of `staged` state as checked files for the committed state
 
 Files that are `committed` state are safely stored and they are also ready to be pushed(uploaded) on github.
 
----
+# We will talk about how to undo / revert `modified`, `staged`, `committed` files.
 
-# `$ git checkout <filename>`
+# 1. Undo / revert `modified`. (This is like `ctrl + z` for specific files`)
+
+## `$ git checkout <filename>`, `$ git restore <filename>`
 
 ## Here are the steps for `$ git checkout <filename>` and `$ git restore .`
 
@@ -302,8 +304,9 @@ Both `$ git checkout <filename>` and `$ git restore .` are to undo the changes i
 $ git checkout README.md
 ```
 
+## Summary : `$ git checkout <filename>` is for undoing changes in unstaged files.
 
-### Summary : `$ git checkout <filename>` is for undoing changes in unstaged files.
+# Undo / revert `2`.
 
 ## `$ git reset <filename>`
 
@@ -319,53 +322,62 @@ ex. `$ git add random.txt`, `$ git add .`
 
 After we type `$ git add random.txt` now the `random.txt` is in staging area, or it is in `staged` state.
 
-If we want to put the `random.txt` back into modified state, or if we want to take `random.txt` out of `staging area` we can use this code
+If we want to unstage the files or in other words, put the `random.txt` back into modified state, or if we want to take `random.txt` out of `staging area` we can use this code
 
 ```
 $ git reset random.txt
 ```
 
-Let's say that we are ready to add `random.txt` to staging area
+Let's say that we are ready to add `random.txt` to staging area, and are ready to commit.
 
 ```
 $ git add random.txt
-```
-
-3. and we are ready to commit.
-
-```
-$ git commit -m "added random.txt"
+$ git commit -m"added random.txt"
 ```
 
 Now the `random.txt` file is in committed state which is ready to be pushed(uploaded) on github.
 
 
-### Summary : `$ git reset <textfile name>` is for putting the files in `staged` state back into `modified` state. [Helpful video](https://youtu.be/qpIvpP1Ag2A)
+## Summary : `$ git reset <textfile name>` is for putting the files in `staged` state back into `modified` state. [Helpful video](https://youtu.be/qpIvpP1Ag2A)
 
 ---
 
-After commit, when we want to revert. It is like `ctrl + z`.
+After commit, when we want to revert or roll back,
 
+The command below leaves all the changes still,
 
-```bash
-$ git checkout HEAD <filename>
+```
+$ git reset --soft HEAD~1
 ```
 
+The command below erases changes as well,
 
-HEAD means the current commit.
+```
+$ git reset --hard HEAD~1
+```
+
+`HEAD` means the current commit. `HEAD~1` means one commit before the current commit. We can use <sha_code> instead.
 
 
 # When we want to revert to a certain version `66e21c1` (after commits)
 
-```bash
-$ git checkout <commit_SHA> .
+This reverts all the files to that specific time when someone made a commit `66e21c1`.
+
+`1.`
+
+```
+$ git reset --hard 66e21c1
 ```
 
+`2.`
+
 ```bash
-$ git checkout 66e21c
+$ git checkout 66e21c1 .
 ```
 
-or if we want to change the specific file only
+The difference between `1.` and `2.` is that `1.` deletes all the commits to `66e21c1`, and `2.` doesn't delete all the commits.(It leaves history).
+
+If we want to change the specific file only
 
 ```bash
 $ git checkout 66e21c README.md
